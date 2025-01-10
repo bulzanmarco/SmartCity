@@ -8,7 +8,12 @@ material = "1.12.0"
 activity = "1.9.3"
 constraintlayout = "2.2.0"
 azure-storage = "12.19.0"
-retrofit = "2.10.0"
+volley = "1.2.1"
+azure-identity = "1.8.0"
+azure-core = "1.44.0"
+azure-storage-blob = "12.22.0"
+azure-data-tables = "12.2.0"
+msal = "com.microsoft.identity.client:msal:2.5.0"
 
 [libraries]
 azure-storage-table = { group = "com.azure", name = "azure-data-tables", version.ref = "azure-storage" }
@@ -19,9 +24,13 @@ appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "a
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
-retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
-
-
+volley = { group = "com.android.volley", name = "volley", version.ref = "volley" }
+azure-identity = { group = "com.azure", name = "azure-identity", version.ref = "azure-identity" }
+azure-core = { group = "com.azure", name = "azure-core", version.ref = "azure-core" }
+azure-storage-blob = { group = "com.azure", name = "azure-storage-blob", version.ref = "azure-storage-blob" }
+azure-data-tables = { group = "com.azure", name = "azure-data-tables", version.ref = "azure-data-tables" }
+reactor-core = { group = "io.projectreactor", name = "reactor-core", version = "3.5.0" }
+msal = "com.microsoft.identity.client:msal:2.5.0"
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 

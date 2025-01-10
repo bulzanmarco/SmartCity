@@ -32,12 +32,19 @@ android {
 }
 
 dependencies {
-    implementation(libs.retrofit)
     implementation(libs.appcompat)
+    implementation("com.microsoft.identity.client:msal:2.7.0")
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.volley)
+    implementation(libs.msal)
+    implementation(libs.azure.identity)
+    implementation(libs.azure.core)
+    implementation(libs.azure.storage.blob)
+    implementation(libs.azure.data.tables)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
 }

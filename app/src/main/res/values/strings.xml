@@ -7,4 +7,18 @@
     <string name="Password">Password</string>
     <string name="add_reports">Add Reports</string>
     <string name="see_reports">See All Reports</string>
+    <string name="description">Describe the problem</string>
+    <string name="sign_up">Sign Up</string>
+
+        <string-array name="cities_array">
+            <item>Timisoara</item>
+            <item>Bucharest</item>
+        </string-array>
+        <string-array name="status_array">
+            <item>New</item>
+            <item>Fixing</item>
+            <item>Fixed</item>
+        </string-array>
+
+
 </resources>
