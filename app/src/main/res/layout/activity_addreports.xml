@@ -17,19 +17,19 @@
         android:gravity="center"
         android:layout_marginBottom="24sp"
         />
-        <EditText
-            android:id="@+id/emailEditText"
+        <TextView
+            android:id="@+id/emailTextView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textSize="20sp"
-            android:inputType="text"/>
+            android:textSize="36dp"
+            android:inputType="text" />
     <TextView
         android:id="@+id/spinner_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select a problem"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textColor="@android:color/black" />
     <Spinner
         android:id="@+id/problem_spinner"
@@ -43,7 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/description"
-        android:textSize="20sp"
+        android:textSize="36sp"
         android:inputType="text"/>
     <TextView
         android:id="@+id/spinner_labe2"
@@ -57,12 +57,14 @@
         android:id="@+id/city_spinner"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
     <Spinner
         android:id="@+id/street_spinner"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
     <Button
         android:id="@+id/done_button"
         android:layout_width="match_parent"

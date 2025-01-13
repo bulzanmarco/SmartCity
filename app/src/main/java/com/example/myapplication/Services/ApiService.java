@@ -12,6 +12,7 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
@@ -21,9 +22,9 @@ public interface ApiService {
     Call<UserLogInResponse> login(@Body UserLogInRequest userLogInRequest);
     @POST("api/Users/signup")
     Call<UserLogInResponse>signup(@Body UserSignUpRequest userSignUpRequest);
-    @GET("api/Controller/city/{cityname}")
-    Call<List<GetReportsResponse>>getreports(@Path("cityname") CityName cityName);
-    @POST("api/Controller/reportProblem")
-    Call<GetReportsResponse>ReportProblem(CreateReportRequest createReportRequest);
+    @GET("api/Reports/city/{cityname}")
+    Call<List<GetReportsResponse>>getReports(@Path("cityname") int cityName);
+    @POST("api/Reports/reportProblem")
+    Call<GetReportsResponse>reportProblem(@Header("Authorization") String token, @Body CreateReportRequest createReportRequest);
 
 }

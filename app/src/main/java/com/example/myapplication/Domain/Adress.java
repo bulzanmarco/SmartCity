@@ -6,32 +6,37 @@ import java.util.List;
 import java.util.Map;
 
 public class Adress {
-    public CityName city;
-    private Streets street;
+    public int city;
+    private int street;
 
     // Constructor
-    public Adress(CityName city, Streets street) {
+    public Adress(int city, int street) {
         this.city = city;
         this.street = street;
     }
 
     // Getter for city
-    public CityName getCity() {
+    public int getCity() {
         return city;
     }
 
     // Setter for city
-    public void setCity(CityName city) {
+    public void setCity(int city) {
         this.city = city;
     }
 
     // Getter for street
-    public Streets getStreet() {
+    public int getStreet() {
         return street;
     }
 
     // Setter for street
-    public void setStreet(Streets street) {
+    public void setStreet(int street) {
         this.street = street;
+    }
+    @Override
+    public String toString()
+    {
+        return city+" "+street+" ";
     }
 }

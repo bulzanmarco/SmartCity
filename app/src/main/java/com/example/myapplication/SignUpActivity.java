@@ -11,7 +11,7 @@ import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.Domain.CityName;
-import com.example.myapplication.Domain.Token;
+import com.example.myapplication.Domain.Users;
 import com.example.myapplication.Model.UserLogInResponse;
 import com.example.myapplication.Model.UserSignUpRequest;
 import com.example.myapplication.Services.ApiService;
@@ -57,7 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
                     public void onResponse(Call<UserLogInResponse> call, Response<UserLogInResponse> response) {
                         if(response.isSuccessful())
                         {
-                            Token.token=response.body().getToken().toString();
+                            Users.token=response.body().getToken().toString();
+                            Users.Email=response.body().getEmail().toString();
                             Intent intent = new Intent(SignUpActivity.this, ReportActivity.class);
                             startActivity(intent);
 

@@ -28,6 +28,7 @@
         <activity android:name=".ReportActivity" />
         <activity android:name=".SeeReportsActivity" />
         <activity android:name=".AddReportActivity" />
+        <activity android:name=".ItemDetailsActivity" />
     </application>
 
 </manifest>

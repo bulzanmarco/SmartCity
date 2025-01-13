@@ -58,4 +58,13 @@ public class CreateReportRequest {
     public void setProblem(int problem) {
         this.problem = problem;
     }
+    @Override
+    public String toString() {
+        return "Report{" +
+                "reporterEmail='" + reporterEmail + '\'' +
+                ", description='" + description + '\'' +
+                ", problemAddress=" + problemAddress +
+                ", problem=" + problem +
+                '}';
+    }
 }

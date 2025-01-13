@@ -8,6 +8,7 @@ import com.example.myapplication.Domain.ProblemType;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class GetReportsResponse {
@@ -15,26 +16,13 @@ public class GetReportsResponse {
         private String id;
         private String reporterEmail;
         private String description;
-        private int street;
-        private int city;
-        private LocalDateTime reportDate;
+       private Adress problemAddress;
+        private Date reportDate;
         private int status;
         private int problem;
 
 
-        public GetReportsResponse(Report report) {
-            this.id = report.getRowKey();
-            this.reporterEmail = report.getReporterEmail();
-            this.description = report.getDescription();
-            
-            this.city = report.getPartitionKey();
-            this.street = report.getStreet();
 
-
-            this.reportDate = report.getReportDate();
-            this.status = status;
-            this.problem = problem;
-        }
 
         // Getter și Setter pentru id
         public String getId() {
@@ -63,30 +51,21 @@ public class GetReportsResponse {
             this.description = description;
         }
 
-        // Getter și Setter pentru street
-        public int getStreet() {
-            return street;
+
+        public Adress getProblemAddress() {
+            return problemAddress;
         }
 
-        public void setStreet(int street) {
-            this.street = street;
-        }
-
-        // Getter și Setter pentru city
-        public int getCity() {
-            return city;
-        }
-
-        public void setCity(int city) {
-            this.city = city;
+        public void setProblemAddress(Adress problemAddress) {
+            this.problemAddress = problemAddress;
         }
 
         // Getter și Setter pentru reportDate
-        public LocalDateTime getReportDate() {
+        public Date getReportDate() {
             return reportDate;
         }
 
-        public void setReportDate(LocalDateTime reportDate) {
+        public void setReportDate(Date reportDate) {
             this.reportDate = reportDate;
         }
 
@@ -107,5 +86,19 @@ public class GetReportsResponse {
         public void setProblem(int problem) {
             this.problem = problem;
         }
+    @Override
+    public String toString() {
+        return "Report{" +
+                "id='" + id + '\'' +
+                ", reporterEmail='" + reporterEmail + '\'' +
+                ", description='" + description + '\'' +
+                ", street=" + problemAddress.getStreet() +
+                ", city=" + problemAddress.getCity() +
+                ", reportDate=" + (reportDate != null ? reportDate.toString() : "null") +
+                ", status=" + status +
+                ", problem=" + problem +
+                '}';
     }
+
+}
 
