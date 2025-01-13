@@ -33,7 +33,7 @@ public class AddReportActivity extends AppCompatActivity {
     private EditText description,emailText;
     private Spinner problemSpinner,citySpinner,streetSpinner;
     private Button doneButton;
-
+    private String x;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
